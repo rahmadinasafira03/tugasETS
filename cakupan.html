@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEExpress</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #navbar{
+            z-index: 1;
+            width: 100%;
+            position: fixed;
+            transition: top 0.3s;
+        }
+        .nav-link, .footer-links a{
+            transition: 0.3s;
+        }
+        nav li{
+            padding: 10px;
+        }
+        .navbar-brand{
+            margin-left: 50px;
+        }
+        .carousel-inner img {
+          height: 100%;
+          width: 100%;
+        }
+        .banner img{
+            margin-top: 5%;
+            height: 75vh;
+            width: 100%;
+        }
+        #cards_landscape_wrap-2 .container{
+            padding-top: 15px; 
+            padding-bottom: 100px;
+        }
+        .teks:hover{
+          text-shadow: 2px 2px 5px red;
+        }
+        .card-flyer{
+            margin-top: 10%;
+            border-radius: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+            text-align: center;
+            padding: 30px 18px;
+        }
+        
+        footer{
+            bottom: 0;
+        }
+        .footer-distributed{
+            background-color: #292c2f;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+         
+            padding: 55px 50px;
+            margin-top: 80px;
+        }
+         
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: inline-block;
+            vertical-align: top;
+        }
+         
+        .footer-distributed .footer-left{
+            width: 40%;
+        }
+         
+        .footer-distributed h3{
+            color:  #ffffff;
+            margin: 0;
+        }
+         
+        .footer-distributed h3 span{
+            color:  #DA3849;
+        }
+         
+         
+        .footer-distributed .footer-links{
+            color:  #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+         
+        .footer-distributed .footer-links a{
+            display:inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color:  inherit;
+        }
+         
+        .footer-distributed .footer-company-name{
+            color:  #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+         
+        .footer-distributed .footer-center{
+            width: 35%;
+        }
+         
+        .footer-distributed .footer-center i{
+            background-color:  #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+         
+        .footer-distributed .footer-center i.fa-envelope{
+            font-size: 17px;
+            line-height: 38px;
+        }
+         
+        .footer-distributed .footer-center p{
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin:0;
+        }
+         
+        .footer-distributed .footer-center p span{
+            display:block;
+            font-weight: normal;
+            font-size:14px;
+            line-height:2;
+        }
+         
+        .footer-distributed .footer-center p a{
+            color:  #DA3849;
+            text-decoration: none;;
+        }
+         
+        .footer-distributed .footer-right{
+            width: 20%;
+        }
+         
+        .footer-distributed .footer-company-about{
+            line-height: 20px;
+            color:  #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+         
+        .footer-distributed .footer-company-about span{
+            display: block;
+            color:  #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+         
+        .footer-distributed .footer-icons{
+            margin-top: 25px;
+        }
+         
+        .footer-distributed .footer-icons a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color:  #33383b;
+            border-radius: 2px;
+         
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+         
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        .footer-links a:hover{
+            color: gainsboro;
+        }
+
+        /* Small screens */
+        @media only screen and (max-width: 600px) {
+            .navbar-brand{
+                margin-left: 0px;
+            }
+            nav li{
+                padding: 0px;
+            }
+            .banner img{
+                margin-top: 12%;
+                height: 25vh;
+                width: 100%;
+            }
+            .footer-distributed{
+                font: bold 14px sans-serif;
+            
+            }
+         
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right{
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+         
+            .footer-distributed .footer-center i{
+                margin-left: 0;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+          <a class="navbar-brand" href="#"><h3><b><i>ADE<span style="color: #DA3849;">Express</span></i></b></h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/aboutus.html">About us <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+              <li class="nav-item">
+                  <a class="btn btn-danger" href="#" role="button">Ship Now</a>
+                </li>
+            </ul>
+          </div>
+    </header>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                        <div class="card-flyer ">
+                            <h3>Our Service Coverage</h3>
+                            <p>Pos Indonesia kini telah mampu menunjukkan kreatifitasnya dalam pengembangan bidang perposan Indonesia dengan memanfaatkan infrastruktur jejaring yang dimilikinya yang mencapai sekitar 58.700 titik layanan yang menjangkau 100 persen kota/kabupaten, hampir 100 persen kecamatan dan 42 persen kelurahan/desa, dan 940 lokasi transmigrasi terpencil di Indonesia. Wilayah layanan tersebut terbagi dalam 11 Regional. Seiring dengan perkembangan informasi, komunikasi dan teknologi, jejaring Pos Indonesia sudah memiliki 4.800 Kantorpos online, serta dilengkapi elektronik mobile pos di beberapa kota besar. Semua titik merupakan rantai yang terhubung satu sama lain secara solid & terintegrasi. Sistem kodepos diciptakan untuk mempermudah processing kiriman pos dimana tiap jengkal daerah Indonesia mampu diidentifikasi dengan akurat.</p>
+                         </div>
+                </div>
+                <div class="col-md-5" style="margin-top: 5%;">
+                        <div class="card-flyer ">
+                        <img src="/foto/petaservice.jpg" style="width: 100%; height: 300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+              <h3><b><i>ADE<span>Express</span></i></b></h3>
+              <p class="footer-links">
+                  <a href="#">About us</a>  .  
+                  <a href="#">Our Services</a>  .  
+                  <a href="#">Contacts</a>  .  
+                  <a href="#">Ship now</a>  .  
+                  <a href="#">Faq</a>  
+              </p>
+              <p class="footer-company-name">ADEExpress &copy; 2020</p>
+      </div>
+      <div class="footer-center">
+              <div>
+                  <i class="fa fa-map-marker"></i>
+                  <p><span>Jl Gubernur Suryo No.10</span> Surabaya, Indonesia</p>
+              </div>
+              <div>
+                  <i class="fa fa-phone"></i>
+                  <p>+1 555 123456</p>
+              </div>
+              <div>
+                  <i class="fa fa-envelope"></i>
+                  <p><a href="mailto:support@company.com">contact@adeexpress.com</a></p>
+              </div>
+      </div>
+   
+      <div class="footer-right">
+              <p class="footer-company-about">
+              <span>About the company</span>
+                  ADE is an express and logistics courier services company, originating from Indonesia.
+              </p>
+              <div class="footer-icons">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-github"></i></a>
+              </div>
+      </div>
+   
+    </footer>
+    <script>
+      
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-100px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    
+    </script>
+</body>
+</html>
